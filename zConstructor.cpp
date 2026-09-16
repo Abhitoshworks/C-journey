@@ -1,16 +1,25 @@
 #include<iostream>
 using namespace std;
-
-class s1{
-public:
-string name;
-int marks;
-s1(string n,int m ){    
-      name = n;  
-      marks = m;
-}};
+class lh1{
+    public:
+    int marks;
+    string name;
+    int rollno; 
+    lh1(){                 //constructor
+     name = "Abhitosh";
+     marks = 69;   
+     rollno = 2025293205;
+    cout<<"Constructor called"<<endl;
+       }
+    void displaystudentsname(){
+        cout<<"the name of the student is "<<name<<endl;
+        cout<<"the marks of the student is "<<marks<<endl;
+        cout<<"the rollnumber of the student is "<<rollno<<endl;
+    }
+};
 int main(){
-   s1 obj("Abhitosh",69);
-   cout<<"the name of the student is "<<obj.name<<" and his marks are "<<obj.marks;
+   lh1 coolstudent; //bina object ke constructor call nhi hoga
+   cout<<coolstudent.name<<endl; //obj se call hota hai constructor 
+   coolstudent.displaystudentsname();
    return 0;
 }
