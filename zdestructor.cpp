@@ -15,6 +15,12 @@ public:
         marks = new int;
         *marks = 67;
     }
+    lh6(const lh6 &newobj){
+        name = newobj.name;
+        rollno = newobj.rollno;
+        marks = new int;
+        *marks = *(newobj.marks);
+    }
     void displaystudent()
     {
         cout << "the name of the student is " << name << endl;
@@ -32,6 +38,9 @@ public:
 int main()
 {
     lh6 random;
+    lh6 random2 = random;
+    cout<<"Adress of random"<<random.marks<<endl;
+    cout<<"Address of random"<<random2.marks<<endl; //diff address ayega kyoki new memory allocate hui copy constructor ki wajah se
     random.displaystudent();
     return 0;
 }
